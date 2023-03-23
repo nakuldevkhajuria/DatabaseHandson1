@@ -1,0 +1,28 @@
+After opening the MongoShell
+
+
+
+do these commands as follows:
+1. use Human_Resource
+
+2. db.createCollection("employee")
+add objects in the collection using this template:
+db.employee.insertOne({
+"firstName": "Jame",
+  "lastName": "Doe",
+  "salary": "35000",
+  "department": "Accounts",
+  "lastCompany": "Z",
+  "lastSalary": "20000",
+  "overallExp": "1",
+  "contactInfo": "123567890",
+  "yearGrad": "2019",
+  "gradStream": "ECE"
+})
+
+3. db.employee.find()
+4. db.employee.find({"salary":{"$gt":"30000"}})
+5. db.employee.find({"overallExp":{"$gt":"2"}})
+6. db.employee.find({"yearGrad":{"$gt":"2015"},"overallExp":{"$gt":"1"}})
+7. db.employee.updateMany({"salary":{"$gt":"70000"}}, {"$set":{"salary":"65000"}})
+8. db.employee.deleteMany({"lastCompany":"Y"})
